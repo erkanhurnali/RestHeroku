@@ -1,0 +1,1 @@
+web gunicorn RestDeneme1.wsgi:application --log-file -
