@@ -78,14 +78,24 @@ WSGI_APPLICATION = 'RestDeneme1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# postgres://rgvzgzmjjobulc:8674723c86fa9e6c962662e4fa5f64ab6072f7ef0bc5ed5ccc6ee8f896c0fe46@ec2-54-78-142-10.eu-west-1.compute.amazonaws.com:5432/dd3u36ctnk7u96
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default' : {
+        'ENGINE':'django.db.backends.postgresql',
+        'NAME': 'dd3u36ctnk7u96',
+        'HOST': 'ec2-54-78-142-10.eu-west-1.compute.amazonaws.com',
+        'PORT': 5432,
+        'UERR': 'rgvzgzmjjobulc',
+        'PASSWORD': '8674723c86fa9e6c962662e4fa5f64ab6072f7ef0bc5ed5ccc6ee8f896c0fe46',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
