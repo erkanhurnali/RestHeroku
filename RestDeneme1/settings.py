@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'RestDeneme1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 # DATABASES['default'] = dj_database_url.config(
 #     conn_max_age=600,
 #     conn_health_checks=True,
@@ -93,6 +93,15 @@ DATABASES = {
 #     conn_max_age=600,
 #     conn_health_checks=True,
 # )
+DATABASES = {
+    'default' : dj_database_url.config(
+    default='postgres://rgvzgzmjjobulc:8674723c86fa9e6c962662e4fa5f64ab6072f7ef0bc5ed5ccc6ee8f896c0fe46@ec2-54-78-142-10.eu-west-1.compute.amazonaws.com:5432/dd3u36ctnk7u96',
+    conn_max_age=600,
+    conn_health_checks=True,
+    
+    )
+}
+
 # postgres://rgvzgzmjjobulc:8674723c86fa9e6c962662e4fa5f64ab6072f7ef0bc5ed5ccc6ee8f896c0fe46@ec2-54-78-142-10.eu-west-1.compute.amazonaws.com:5432/dd3u36ctnk7u96
 # DATABASES = {
 #     'default' : {
